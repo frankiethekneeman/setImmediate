@@ -1,5 +1,5 @@
 {
-    "name": "set-immediate",
+    "name": "setimmediate-modular",
     "description": "A shim for the setImmediate efficient script yielding API.  Except you get to control the global consequences.",
     "version": "1.0.4",
     "author": "Francis Van Wetering",
