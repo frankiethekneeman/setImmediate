@@ -2,10 +2,11 @@
     "use strict";
 
     if (global.setImmediate) {
-        if (module) {
+        if (typeof module !== "undefined" && module) {
             module.exports = {
                 setImmediate: global.setImmediate,
-                clearImmediate: global.clearImmediate
+                clearImmediate: global.clearImmediate,
+                globalize: function(){}
             };
         }
         return;
@@ -176,13 +177,18 @@
         installSetTimeoutImplementation();
     }
 
-    attachTo.setImmediate = setImmediate;
-    attachTo.clearImmediate = clearImmediate;
+    function globalize() {
+        attachTo.setImmediate = setImmediate;
+        attachTo.clearImmediate = clearImmediate;
+    }
 
-    if (module) {
+    if (typeof module !== "undefined" && module) {
         module.exports = {
             setImmediate: setImmediate,
-            clearImmediate: clearImmediate
+            clearImmediate: clearImmediate,
+            globalize: globalize
         };
+    } else {
+        globalize();
     }
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));

@@ -1,15 +1,16 @@
 {
-    "name": "setimmediate",
-    "description": "A shim for the setImmediate efficient script yielding API",
+    "name": "set-immediate",
+    "description": "A shim for the setImmediate efficient script yielding API.  Except you get to control the global consequences.",
     "version": "1.0.4",
-    "author": "YuzuJS",
+    "author": "Francis Van Wetering",
     "contributors": [
         "Domenic Denicola <d@domenic.me> (https://domenic.me)",
         "Donavon West <github@donavon.com> (http://donavon.com)",
-        "Yaffle"
+        "Yaffle",
+        "YuzuJS"
     ],
     "license": "MIT",
-    "repository": "YuzuJS/setImmediate",
+    "repository": "https://github.com/frankiethekneeman/setImmediate",
     "main": "setImmediate.js",
     "scripts": {
         "lint": "jshint setImmediate.js",

@@ -14,8 +14,27 @@ if (originalGlobalSetImmediate) {
     };
 }
 
+
 var assert = require("assert");
 var sI = require("../setImmediate");
+if (!global.setImmediate && module) {
+    specify("does not have global side effects if a module system exists", function() {
+        assert(typeof global.setImmediate === "undefined");
+        assert(typeof global.clearImmediate === "undefined");
+    });
+
+    sI.globalize();
+
+    specify("Globalizes when told", function() {
+        assert(typeof global.setImmediate === "function");
+        assert(typeof global.clearImmediate === "function");
+    });
+} else if (!module) {
+    specify("has global side effects if no module system exists", function() {
+        assert(typeof global.setImmediate === "function");
+        assert(typeof global.clearImmediate === "function");
+    });
+}
 
 specify("Handlers do execute", function (done) {
     setImmediate(function () {

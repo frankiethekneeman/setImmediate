@@ -1,5 +1,5 @@
 # setImmediate.js
-**A YuzuJS production**
+**No longer a YuzuJS production**
 
 ## Introduction
 
@@ -55,37 +55,22 @@ In the browser, include it with a `<script>` tag; pretty simple.
 In Node.js, do
 
 ```
-npm install --save setimmediate
+npm install --save set-immediate
 ```
 
 then
 
 ```js
-require("setimmediate");  // (somewhere early in your app; it attaches to the global scope.)
+require("set-immediate");  // (somewhere early in your app; it attaches to the global scope.)
 ```
 
 
-## Demo
 
-* [Quick sort demo][cross-browser-demo]
-
-## Reference and Reading
-
- * [Efficient Script Yielding W3C Editor's Draft][spec]
- * [W3C mailing list post introducing the specification][list-post]
- * [IE Test Drive demo][ie-demo]
- * [Introductory blog post by Nicholas C. Zakas][ncz]
-
-
-[spec]: https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html
 [task queue]: http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#task-queue
 [microtask queue]: http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#perform-a-microtask-checkpoint
 [raf]: https://html.spec.whatwg.org/multipage/webappapis.html#dom-window-requestanimationframe
 [asap]: https://github.com/kriskowal/asap
-[list-post]: http://lists.w3.org/Archives/Public/public-web-perf/2011Jun/0100.html
-[ie-demo]: http://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html
 [ncz]: http://www.nczonline.net/blog/2011/09/19/script-yielding-with-setimmediate/
 [nextTick]: http://nodejs.org/docs/v0.8.16/api/process.html#process_process_nexttick_callback
 [postMessage]: http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#posting-messages
 [MessageChannel]: http://www.whatwg.org/specs/web-apps/current-work/multipage/web-messaging.html#channel-messaging
-[cross-browser-demo]: http://jphpsf.github.com/setImmediate-shim-demo
