@@ -55,13 +55,20 @@ In the browser, include it with a `<script>` tag; pretty simple.
 In Node.js, do
 
 ```
-npm install --save set-immediate
+npm install --save setimmediate-modular
 ```
 
 then
 
 ```js
-require("set-immediate");  // (somewhere early in your app; it attaches to the global scope.)
+require("setimmediate-modular").globalize();
+```
+
+```js
+shim = require("setimmediate-modular");
+shim.setImmediate(function() {
+    // Thing ring, do your thing.
+});
 ```
 
 

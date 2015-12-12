@@ -1,7 +1,7 @@
 {
     "name": "setimmediate-modular",
     "description": "A shim for the setImmediate efficient script yielding API.  Except you get to control the global consequences.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "author": "Francis Van Wetering",
     "contributors": [
         "Domenic Denicola <d@domenic.me> (https://domenic.me)",
